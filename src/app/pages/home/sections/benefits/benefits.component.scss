@@ -1,0 +1,23 @@
+.benefit {
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  border-radius: var(--ci-radius);
+  padding: 1.35rem;
+}
+
+.benefit i-tabler {
+  width: 28px;
+  height: 28px;
+  color: var(--ci-brand);
+  margin-bottom: 0.75rem;
+}
+
+.benefit h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+}
+
+.benefit p {
+  margin: 0;
+  color: var(--ci-muted);
+}

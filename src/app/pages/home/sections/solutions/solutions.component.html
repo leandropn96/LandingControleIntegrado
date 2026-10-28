@@ -1,0 +1,26 @@
+<section class="section solutions" id="solucao">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Como funciona</span>
+      <h2 class="section__title">Uma venda que organiza o negócio inteiro</h2>
+      <p class="section__lead">
+        Do caixa ao relatório: o Controle Integrado conecta operação, estoque, financeiro e fiscal em sequência.
+      </p>
+    </div>
+
+    <ol class="flow">
+      @for (step of steps; track step.title; let i = $index; let last = $last) {
+        <li class="flow__item">
+          <div class="flow__badge">{{ i + 1 }}</div>
+          <div>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+          @if (!last) {
+            <i-tabler name="arrow-down" class="flow__arrow" aria-hidden="true"></i-tabler>
+          }
+        </li>
+      }
+    </ol>
+  </div>
+</section>

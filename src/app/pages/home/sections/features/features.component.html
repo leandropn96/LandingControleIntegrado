@@ -1,0 +1,27 @@
+<section class="section features" id="funcionalidades">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Módulos</span>
+      <h2 class="section__title">Funcionalidades para operar e crescer</h2>
+      <p class="section__lead">
+        Do PDV ao fiscal: tudo que o comércio precisa no dia a dia, organizado por área.
+      </p>
+    </div>
+
+    <div class="features__grid">
+      @for (cat of categories; track cat.title) {
+        <article class="feature">
+          <div class="feature__top">
+            <i-tabler [name]="cat.icon" aria-hidden="true"></i-tabler>
+            <h3>{{ cat.title }}</h3>
+          </div>
+          <ul>
+            @for (item of cat.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

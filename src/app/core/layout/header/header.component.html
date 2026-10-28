@@ -1,0 +1,28 @@
+<header class="header" [class.header--scrolled]="scrolled()" [class.header--open]="menuOpen()">
+  <div class="container header__inner">
+    <a class="brand" href="#inicio" (click)="closeMenu()" aria-label="Controle Integrado - início">
+      <span class="brand__mark" aria-hidden="true">CI</span>
+      <span class="brand__text">Controle Integrado</span>
+    </a>
+
+    <nav class="nav" [class.nav--open]="menuOpen()" aria-label="Principal">
+      @for (link of links; track link.href) {
+        <a class="nav__link" [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="btn btn--primary nav__cta" href="#contato" (click)="closeMenu()">
+        Solicitar Demonstração
+      </a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="site-nav"
+      aria-label="Abrir menu"
+      (click)="toggleMenu()"
+    >
+      <i-tabler [name]="menuOpen() ? 'x' : 'menu-2'" class="menu-btn__icon"></i-tabler>
+    </button>
+  </div>
+</header>

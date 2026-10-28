@@ -1,0 +1,20 @@
+<section class="section faq" id="faq">
+  <div class="container faq__layout">
+    <div class="section__head">
+      <span class="section__eyebrow">FAQ</span>
+      <h2 class="section__title">Perguntas frequentes</h2>
+      <p class="section__lead">Respostas diretas para acelerar sua decisão.</p>
+    </div>
+
+    <mat-accordion multi="false" class="faq__accordion">
+      @for (item of items; track item.question) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.question }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ item.answer }}</p>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</section>

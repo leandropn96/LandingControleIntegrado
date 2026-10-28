@@ -1,0 +1,41 @@
+<section class="section screens" id="telas">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Galeria</span>
+      <h2 class="section__title">Telas do sistema</h2>
+      <p class="section__lead">Uma prévia visual do ambiente que sua equipe vai usar todos os dias.</p>
+    </div>
+
+    <div class="screens__layout">
+      <div class="screens__preview" [attr.data-accent]="screens[active()].accent">
+        <div class="screens__window">
+          <div class="screens__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h3>{{ screens[active()].title }}</h3>
+          <p>{{ screens[active()].caption }}</p>
+          <div class="screens__mock" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="screens__nav">
+        <div class="screens__controls">
+          <button type="button" class="btn btn--ghost" (click)="prev()" aria-label="Anterior">‹</button>
+          <button type="button" class="btn btn--ghost" (click)="next()" aria-label="Próxima">›</button>
+        </div>
+        <div class="screens__thumbs" role="tablist" aria-label="Telas do sistema">
+          @for (screen of screens; track screen.title; let i = $index) {
+            <button
+              type="button"
+              role="tab"
+              class="thumb"
+              [class.thumb--active]="active() === i"
+              [attr.aria-selected]="active() === i"
+              (click)="select(i)"
+            >
+              {{ screen.title }}
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

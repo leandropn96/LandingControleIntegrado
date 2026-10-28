@@ -1,0 +1,49 @@
+<section class="section contact" id="contato">
+  <div class="container contact__layout">
+    <div>
+      <span class="section__eyebrow">Contato</span>
+      <h2 class="section__title">Solicite uma demonstração</h2>
+      <p class="section__lead">
+        Conte um pouco do seu negócio. Nesta fase, o envio é simulado — em breve conectamos ao CRM.
+      </p>
+    </div>
+
+    @if (submitted()) {
+      <div class="contact__success" role="status">
+        Recebemos seus dados (simulação). Em breve nossa equipe entra em contato.
+      </div>
+    } @else {
+      <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <label>
+          Nome
+          <input type="text" formControlName="nome" autocomplete="name" />
+        </label>
+        <label>
+          Empresa
+          <input type="text" formControlName="empresa" autocomplete="organization" />
+        </label>
+        <label>
+          Telefone
+          <input type="tel" formControlName="telefone" autocomplete="tel" />
+        </label>
+        <label>
+          E-mail
+          <input type="email" formControlName="email" autocomplete="email" />
+        </label>
+        <label>
+          Cidade
+          <input type="text" formControlName="cidade" autocomplete="address-level2" />
+        </label>
+        <label>
+          Estado
+          <input type="text" formControlName="estado" maxlength="2" placeholder="UF" autocomplete="address-level1" />
+        </label>
+        <label class="full">
+          Mensagem
+          <textarea rows="4" formControlName="mensagem"></textarea>
+        </label>
+        <button class="btn btn--primary full" type="submit">Enviar solicitação</button>
+      </form>
+    }
+  </div>
+</section>

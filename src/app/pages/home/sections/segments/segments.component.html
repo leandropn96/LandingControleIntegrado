@@ -1,0 +1,21 @@
+<section class="section segments" id="segmentos">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Segmentos</span>
+      <h2 class="section__title">Para o varejo que vive de giro e margem</h2>
+      <p class="section__lead">
+        Nascido para mercadinhos e supermercados — com potencial para todo o comércio de vizinhança.
+      </p>
+    </div>
+
+    <div class="grid-cards">
+      @for (item of items; track item.title) {
+        <article class="segment">
+          <i-tabler [name]="item.icon" aria-hidden="true"></i-tabler>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

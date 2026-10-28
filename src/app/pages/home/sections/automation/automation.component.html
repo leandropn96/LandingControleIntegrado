@@ -1,0 +1,21 @@
+<section class="section automation" id="diferenciais">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Diferenciais</span>
+      <h2 class="section__title">Feito para operar com confiança</h2>
+      <p class="section__lead">
+        Infraestrutura e experiência pensadas para o varejo que não pode parar.
+      </p>
+    </div>
+
+    <div class="grid-cards">
+      @for (item of items; track item.title) {
+        <article class="diff">
+          <i-tabler [name]="item.icon" aria-hidden="true"></i-tabler>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

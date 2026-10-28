@@ -1,0 +1,21 @@
+<section class="section problems" id="problemas">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Realidade do varejo</span>
+      <h2 class="section__title">Os problemas que tiram o sono do comerciante</h2>
+      <p class="section__lead">
+        Quando o controle falha, o prejuízo aparece no estoque, no caixa e na margem — muitas vezes sem aviso.
+      </p>
+    </div>
+
+    <div class="grid-cards">
+      @for (item of items; track item.title) {
+        <article class="problem">
+          <i-tabler [name]="item.icon" class="problem__icon" aria-hidden="true"></i-tabler>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

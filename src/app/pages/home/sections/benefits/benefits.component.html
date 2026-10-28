@@ -1,0 +1,19 @@
+<section class="section benefits" id="beneficios">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Benefícios</span>
+      <h2 class="section__title">O que muda no resultado da loja</h2>
+      <p class="section__lead">Mais controle, menos perda e decisões com base no que realmente acontece no caixa.</p>
+    </div>
+
+    <div class="grid-cards">
+      @for (item of items; track item.title) {
+        <article class="benefit">
+          <i-tabler [name]="item.icon" aria-hidden="true"></i-tabler>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

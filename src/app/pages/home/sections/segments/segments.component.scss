@@ -1,0 +1,23 @@
+.segment {
+  background: linear-gradient(180deg, #fff, #f7fbf8);
+  border: 1px solid var(--ci-line);
+  border-radius: var(--ci-radius);
+  padding: 1.4rem 1.25rem;
+}
+
+.segment i-tabler {
+  width: 28px;
+  height: 28px;
+  color: var(--ci-brand);
+  margin-bottom: 0.8rem;
+}
+
+.segment h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+}
+
+.segment p {
+  margin: 0;
+  color: var(--ci-muted);
+}

@@ -1,0 +1,20 @@
+<section class="section testimonials" id="depoimentos">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Depoimentos</span>
+      <h2 class="section__title">Quem usa, sente o controle no dia a dia</h2>
+    </div>
+
+    <figure class="quote">
+      <blockquote>{{ items[index()].quote }}</blockquote>
+      <figcaption>
+        <strong>{{ items[index()].name }}</strong>
+        <span>{{ items[index()].role }} · {{ items[index()].company }}</span>
+      </figcaption>
+      <div class="quote__nav">
+        <button type="button" class="btn btn--ghost" (click)="prev()" aria-label="Depoimento anterior">‹</button>
+        <button type="button" class="btn btn--ghost" (click)="next()" aria-label="Próximo depoimento">›</button>
+      </div>
+    </figure>
+  </div>
+</section>

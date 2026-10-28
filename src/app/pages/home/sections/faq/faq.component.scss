@@ -1,0 +1,34 @@
+.faq__layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+}
+
+.faq__accordion {
+  display: grid;
+  gap: 0.65rem;
+}
+
+:host ::ng-deep .mat-expansion-panel {
+  border: 1px solid var(--ci-line);
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  background: #fff;
+}
+
+:host ::ng-deep .mat-expansion-panel-header-title {
+  font-weight: 700;
+  color: var(--ci-ink);
+}
+
+:host ::ng-deep .mat-expansion-panel-body p {
+  margin: 0;
+  color: var(--ci-muted);
+}
+
+@media (max-width: 900px) {
+  .faq__layout {
+    grid-template-columns: 1fr;
+  }
+}

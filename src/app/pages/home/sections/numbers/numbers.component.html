@@ -1,0 +1,10 @@
+<section class="section numbers" id="numeros" aria-label="Indicadores">
+  <div class="container numbers__grid">
+    @for (stat of stats; track stat.label) {
+      <div class="stat">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,34 @@
+<section class="section plans" id="planos">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Planos</span>
+      <h2 class="section__title">Escolha o ritmo do seu crescimento</h2>
+      <p class="section__lead">
+        Orçamento sob medida — solicite uma proposta alinhada ao tamanho da sua operação.
+      </p>
+    </div>
+
+    <div class="plans__grid">
+      @for (plan of plans; track plan.id) {
+        <article class="plan" [class.plan--highlight]="plan.highlight">
+          @if (plan.highlight) {
+            <span class="plan__badge">Mais escolhido</span>
+          }
+          <h3>{{ plan.name }}</h3>
+          <p class="plan__desc">{{ plan.description }}</p>
+          <ul>
+            @for (feature of plan.features; track feature.text) {
+              <li [class.muted]="!feature.included">
+                <i-tabler [name]="feature.included ? 'check' : 'minus'" aria-hidden="true"></i-tabler>
+                {{ feature.text }}
+              </li>
+            }
+          </ul>
+          <a class="btn" [class.btn--primary]="plan.highlight" [class.btn--ghost]="!plan.highlight" href="#contato">
+            {{ plan.cta }}
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>
