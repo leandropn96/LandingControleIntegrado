@@ -38,12 +38,13 @@ npm run build:gh-pages
 
 ### Publicar
 
-1. Crie um repositório **público** no GitHub (ex.: `LandingControleIntegrado`).
-2. No repositório: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Faça o push desta pasta para a branch `main`.
-4. O workflow `.github/workflows/deploy-github-pages.yml` faz o deploy automático.
+1. Repositório público no GitHub (ex.: `LandingControleIntegrado`).
+2. Em **Settings → Pages → Build and deployment**:
+   - Source: **Deploy from a branch**
+   - Branch: **gh-pages** / **/ (root)** → Save
+3. Push na `main` dispara o workflow, que atualiza a branch `gh-pages`.
 
-URL típica: `https://SEU_USUARIO.github.io/LandingControleIntegrado/`
+URL: `https://leandropn96.github.io/LandingControleIntegrado/`
 
 ### Domínio próprio (`controleintegrado.com.br`)
 
